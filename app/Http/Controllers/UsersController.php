@@ -32,7 +32,7 @@ class UsersController extends Controller
         // バリデーション = 「入力チェック」
         $request->validate([
             'name' => 'required',
-            'user_name' => 'required',
+            'nickname' => 'required',
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'min:8', 'max:255', 'alpha_num'],
         ]);
@@ -41,7 +41,7 @@ class UsersController extends Controller
         $user = new User();
         $user->fill([ // fillを使い、モデルの全カラムを更新。
             'name' => $request->name,
-            'user_name' => $request->user_name,
+            'nickname' => $request->nickname,
             'email' => $request->email,
             'password' => Hash::make($request->password), // 新規登録時にパスワードをハッシュ化。
             'user_type' => $request->user_type,
@@ -64,12 +64,12 @@ class UsersController extends Controller
     {
         // バリデーション = 「入力チェック」
         $request->validate([
-            'user_name' => 'required',
+            'nickname' => 'required',
             'password' => ['required', 'min:8', 'max:255', 'alpha_num']
         ]);
 
         // ログイン認証
-        if(Auth::attempt(['user_name' => $request->input('user_name'), 'password' => $request->input('password')]))
+        if(Auth::attempt(['nickname' => $request->input('nickname'), 'password' => $request->input('password')]))
             {
             return redirect()->route('home_screen'); // ログインに成功するとホーム画面にリダイレクト
             }
