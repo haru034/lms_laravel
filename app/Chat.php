@@ -8,7 +8,7 @@ class Chat extends Model
 {
     const UPDATED_AT = null; // updated_atを無効化
     protected $fillable = [
-        'user_id', 'title', 'message',
+        'user_id', 'nickname', 'message',
     ];
 
     public function user()
