@@ -16,7 +16,7 @@ class Chats extends Migration
         Schema::create('chats', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id'); // usersテーブルのid
-            $table->string('title'); // 件名
+            $table->string('nickname'); // ニックネーム
             $table->string('message'); // チャットの内容
             $table->timestamps();
             $table->dropColumn('updated_at'); // 更新日時を無効化
