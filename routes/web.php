@@ -29,4 +29,3 @@ Route::get('/home_screen', 'ChatController@home_screen')->name('home_screen');
 
 //チャット登録
 Route::post('/chat', 'ChatController@chat')->name('chat');
-Route::get('/chat_delete/{id}', 'ChatController@chat_delete')->name('chat_delete'); //チャット削除
