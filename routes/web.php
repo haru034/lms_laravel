@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'UsersController@signup_form'); // php artisan serve起動時に表示
+Route::get('/', 'UsersController@login_form'); // php artisan serve起動時に表示
 
 //新規登録画面の表示
 Route::get('/signup_form', 'UsersController@signup_form')->name('signup_form');
