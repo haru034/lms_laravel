@@ -13,6 +13,10 @@ h1 {
     
 }
 
+.btn-movement {
+    position: relative; bottom: 60px;
+}
+
 .outer-message-form {
     width:250px;
     height:400px;
@@ -20,23 +24,27 @@ h1 {
 }
 
 textarea {
-    border-radius: 10px;
     resize: none;
-    width: 500%;
-    height: 50%;
+    width: 300%;
+    height: 20%;
     justify-content: center;
 }
 
+.chat {
+    position: relative; bottom:145px;
+}
+
 .chatarea { /* チャット画面のCSS */
+    position: relative; bottom:280px;
     border-style: solid;
+    height: 500px; /* table(親要素)の高さを指定 */
     overflow-y: scroll; /* チャットの投稿数が親要素の境界からあふれた場合、画面をスクロールすることで表示できる */
 }
 
-table, th, td, tr {
+th, td, tr {
     border-style: solid;
     border-collapse: collapse;
     border-width: 2px;
-
 }
 
 table {
@@ -49,8 +57,8 @@ table {
 }
 
 table.st-tbl1 th { /* thを固定 */
-    color: black;
-    background: white;
+    color: white;
+    background: black;
     position: sticky;
 	top: 0;
     text-align: center;
