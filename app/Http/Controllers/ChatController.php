@@ -36,15 +36,9 @@ class ChatController extends Controller
         $user = Auth::user(); // 認証しているユーザーを取得
         $id = Auth::id(); // 認証しているユーザーのIDを取得
         $chat->user_id = $id; // user_idをセット
-        $chat->title = $request->title; // titleをセット
+        $chat->nickname = $id; // nicknameをセット
         $chat->message = $request->message; // messageをセット
         $chat->save(); // $chatに格納されている情報を保存。
         return redirect('home_screen'); // 入力内容が保存されたら、ホーム画面にリダイレクト
-    }
-
-    public function chat_delete($result) // チャット削除の処理(get)
-    {
-        $result = Chat::where('id', $result)->delete();
-        return redirect('home_screen'); // 「削除」ボタンを押すと、ホーム画面にリダイレクト
     }
 }
