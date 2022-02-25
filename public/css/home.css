@@ -1,2 +1,66 @@
 /* ホーム画面のCSS */
+body {
+    padding: 50px;
+    font-size: 100%;
+    background-color: white;
+}
 
+h1 {
+    margin-bottom: 30px;
+    font-size: 200%;
+    color: black;
+    text-align: center;
+    
+}
+
+.outer-message-form {
+    width:250px;
+    height:400px;
+    margin-top:100px;
+}
+
+textarea {
+    border-radius: 10px;
+    resize: none;
+    width: 500%;
+    height: 50%;
+    justify-content: center;
+}
+
+.chatarea { /* チャット画面のCSS */
+    border-style: solid;
+    overflow-y: scroll; /* チャットの投稿数が親要素の境界からあふれた場合、画面をスクロールすることで表示できる */
+}
+
+table, th, td, tr {
+    border-style: solid;
+    border-collapse: collapse;
+    border-width: 2px;
+
+}
+
+table {
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    width: 100%;
+    height: 30%;
+}
+
+table.st-tbl1 th { /* thを固定 */
+    color: black;
+    background: white;
+    position: sticky;
+	top: 0;
+    text-align: center;
+}
+
+.chat_delete_button { /* チャット削除ボタンのCSS */
+    display       : inline-block;
+    font-size     : 8pt; /* 文字サイズ */
+    text-align    : center; /* 文字位置 */
+    padding       : 5px 5px; /* 余白 */
+    background    : #ff0000; /* 背景色 */
+    color         : #000000; /* 文字色 */
+}
