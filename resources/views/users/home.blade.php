@@ -14,8 +14,7 @@
     <section>
         <div class="btn-movement">
             <div>
-                <p><a class="btn btn-primary" href="{{ url('') }}">マイページに移動</a></p>
-                <!-- <p><a class="btn btn-danger" href="{{ route('home_screen') }}">ホーム画面に戻る</a></p> -->
+                <p><a class="btn btn-primary" href="{{ url('mypage') }}">マイページに移動</a></p>
             </div>
             <div>
                 <form action="{{ route('logout') }}" method="post">
