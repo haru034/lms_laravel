@@ -1,68 +1,60 @@
 /* ホーム画面のCSS */
 body {
-    padding: 50px;
+    padding: 5%;
     font-size: 100%;
     background-color: white;
 }
 
 h1 {
     margin-bottom: 30px;
-    font-size: 200%;
     color: black;
     text-align: center;
-    
 }
 
-.btn-movement {
-    position: relative; bottom: 60px;
+@media screen and (max-width: 767px) { /* スマホ */
+    h1 {
+    font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 768px) { /* タブレット */
+    h1 {
+    font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1024px) { /* PC */
+    h1 {
+    font-size: 26px;
+    }
 }
 
 .outer-message-form {
-    width:250px;
-    height:400px;
-    margin-top:100px;
+    width:100%;
+    height: auto;
+    margin-top:40px;
 }
 
 textarea {
     resize: none;
-    width: 300%;
+    width: 100%;
     height: 20%;
     justify-content: center;
 }
 
-.chat {
-    position: relative; bottom:145px;
-}
-
-.chatarea { /* チャット画面のCSS */
-    position: relative; bottom:280px;
+.chat_table { /* チャット画面のCSS */
     border-style: solid;
     text-align: center;
-    width: 100%;
     height: 500px; /* table(親要素)の高さを指定 */
     margin: auto;
     overflow-y: scroll; /* チャットの投稿数が親要素の境界からあふれた場合、画面をスクロールすることで表示できる */
 }
 
-th, td, tr {
-    border-style: solid;
-    border-collapse: collapse;
-    border-width: 2px;
-}
-
 table {
-    margin-left: -2px;
-    margin-right: -2px;
-    margin-top: -2px;
-    margin-bottom: -2px;
-    width: 100%;
-    height: 30%;
+    margin-bottom: 50px;
 }
 
-table.st-tbl1 th { /* thを固定 */
-    color: white;
-    background: black;
+th { /* thを固定 */
     position: sticky;
 	top: 0;
-    text-align: center;
 }

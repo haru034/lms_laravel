@@ -12,33 +12,27 @@
 <body>
     <h1>全国のプログラミング初学者が集う掲示板(β)</h1>
     <section>
-        <div class="btn-movement">
+        <div>
             <div>
                 <p><a class="btn btn-primary" href="{{ url('mypage') }}">マイページに移動</a></p>
-            </div>
-            <div>
-                <form action="{{ route('logout') }}" method="post">
-                    @csrf <!-- CSRF保護 -->
-                    <input type="submit" value="ログアウト"> <!-- ログアウトしてログイン画面に戻る -->
-                </form>
-            </div>
+                <p><a class="btn btn-secondary" href="{{ url('login_form') }}">ログアウト</a></p>
         </div>
-        <div class="chat"> <!-- チャット一覧画面 -->
-            <form action="{{ route('chat') }}" method="post" autocomplete="off" style="height:300px">
+        <div> <!-- チャット一覧画面 -->
+            <form action="{{ route('chat') }}" method="post" autocomplete="off" style="height: auto; margin-bottom: 10px">
                 @csrf <!-- CSRF保護 -->
                 <div class="outer-message-form">
-                    <nobr>「今から学習を始めます」「終わります」など、学習に関する事なら何でもいいので投稿しましょう！</nobr>
+                    <p>「今から学習を始めます」「終わります」など、学習に関する事なら何でもいいので投稿しましょう！</p>
                     <textarea name="message" placeholder="ここにメッセージを入力してください" autocomplete="off" rows="3" cols="200"></textarea><br> <!-- rows =「高さ」, cols =「幅」-->
                     <button type="submit" class="btn btn-success">投稿</button>
                 </div>
             </form>
         </div>
-        <div class="chatarea">
-            <table class="st-tbl1">
-                <thead>
+        <div class="chat_table table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
                     <tr>
-                        <th>表示名(ニックネーム)</th>
-                        <th>メッセージ</th>
+                        <th>表示名</th>
+                        <th>投稿内容</th>
                         <th>投稿日時</th>
                     </tr>
                 </thead>
