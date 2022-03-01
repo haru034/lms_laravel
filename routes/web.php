@@ -29,3 +29,7 @@ Route::get('/home_screen', 'ChatController@home_screen')->name('home_screen');
 
 //チャット登録
 Route::post('/chat', 'ChatController@chat')->name('chat');
+
+//マイページへ遷移
+Route::get('/mypage', 'RecordsController@mypage')->name('mypage');
+// Route::post('/mypage_record', 'RecordsController@mypage_record')->name('mypage_record'); // 学習記録の処理
