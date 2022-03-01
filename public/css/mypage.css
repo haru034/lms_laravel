@@ -1,0 +1,17 @@
+/* マイページのCSS */
+body {
+    padding: 50px;
+    font-size: 100%;
+    background-color: white;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 200%;
+    color: black;
+    text-align: center;
+}
+
+.btn-movement {
+    position: relative; bottom: 60px;
+}
