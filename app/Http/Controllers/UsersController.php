@@ -76,9 +76,4 @@ class UsersController extends Controller
             return redirect()->back(); // ログインに失敗するとログイン画面に戻る
     }
 
-    public function logout(Request $request) // ログアウトの処理(post)
-    {
-        Auth::logout(); // ログアウト
-        return redirect()->route('home_screen'); // 「ログアウト」ボタンを押すと、ログイン画面にリダイレクト
-    }
 }

@@ -22,7 +22,6 @@ Route::post('/signup', 'UsersController@signup')->name('signup'); // 新規登�
 //ログイン画面へ遷移
 Route::get('/login_form', 'UsersController@login_form')->name('login_form');
 Route::post('/login', 'UsersController@login')->name('login'); // ログイン認証
-Route::post('/logout', 'UsersController@logout')->name('logout'); // ログアウト
 
 //ホーム画面へ遷移
 Route::get('/home_screen', 'ChatController@home_screen')->name('home_screen');
