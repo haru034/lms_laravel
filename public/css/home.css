@@ -13,7 +13,7 @@ h1 {
 
 @media screen and (max-width: 767px) { /* スマホ */
     h1 {
-    font-size: 3vw;
+    font-size: 4vw;
     }
 }
 
