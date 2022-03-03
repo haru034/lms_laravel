@@ -1,8 +1,13 @@
-/* マイページのCSS */
+/* マイページ(個人情報編集画面)のCSS */
 body {
     padding: 50px;
     font-size: 100%;
     background-color: white;
+}
+
+.mypage {
+    text-align: center; /* 全体を画面中央に配置 */
+    padding-top: 100px;
 }
 
 h1 {
