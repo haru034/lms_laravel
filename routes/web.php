@@ -30,5 +30,10 @@ Route::get('/home_screen', 'ChatController@home_screen')->name('home_screen');
 Route::post('/chat', 'ChatController@chat')->name('chat');
 
 //マイページへ遷移
-Route::get('/mypage', 'RecordsController@mypage')->name('mypage');
-// Route::post('/mypage_record', 'RecordsController@mypage_record')->name('mypage_record'); // 学習記録の処理
+Route::get('/mypage', 'UsersController@mypage')->name('mypage');
+
+//ユーザー情報の更新
+Route::post('/update', 'UsersController@update')->name('users.update');
+
+//ユーザーを削除
+Route::post('/destroy', 'UsersController@destroy')->name('users.destroy');
