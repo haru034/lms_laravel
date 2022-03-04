@@ -15,7 +15,10 @@ class Chats extends Migration
     {
         Schema::create('chats', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id'); // usersテーブルのid
+            $table->unsignedInteger('user_id'); // usersテーブルのid
+            $table->foreign('user_id') 
+                ->references('id')->on('users')
+                ->onDelete('cascade');  // usersテーブルのidが削除された場合、同じuser_idをchatsテーブルから削除
             $table->string('nickname'); // ニックネーム
             $table->string('message'); // チャットの内容
             $table->timestamps();
