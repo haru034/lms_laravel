@@ -1,4 +1,4 @@
-<!-- マイページ(個人情報編集画面)のView -->
+<!-- マイページ(個人情報編集画面)のView --> 
 <!DOCTYPE html>
 <html lang="ja">
 <head>

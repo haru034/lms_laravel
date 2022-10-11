@@ -1,4 +1,4 @@
-<!-- 新規登録画面のView -->
+<!-- 新規登録画面のView --> 
 <!DOCTYPE html>
 <html lang="ja">
 <head>

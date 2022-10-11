@@ -1,4 +1,4 @@
-<!-- ホーム画面のView -->
+<!-- ホーム画面のView --> 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
