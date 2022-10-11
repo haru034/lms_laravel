@@ -13,27 +13,27 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'UsersController@login_form'); // php artisan serve起動時に表示
+Route::get('/', 'app\Http\Controllers\UsersController@login_form'); // php artisan serve起動時に表示
 
 //新規登録画面の表示
-Route::get('/signup_form', 'UsersController@signup_form')->name('signup_form');
-Route::post('/signup', 'UsersController@signup')->name('signup'); // 新規登録の処理
+Route::get('/signup_form', 'app\Http\Controllers\UsersController@signup_form')->name('signup_form');
+Route::post('/signup', 'app\Http\Controllers\UsersControllerr@signup')->name('signup'); // 新規登録の処理
 
 //ログイン画面へ遷移
-Route::get('/login_form', 'UsersController@login_form')->name('login_form');
-Route::post('/login', 'UsersController@login')->name('login'); // ログイン認証
+Route::get('/login_form', 'app\Http\Controllers\UsersController@login_form')->name('login_form');
+Route::post('/login', 'app\Http\Controllers\UsersController@login')->name('login'); // ログイン認証
 
 //ホーム画面へ遷移
-Route::get('/home_screen', 'ChatController@home_screen')->name('home_screen');
+Route::get('/home_screen', 'app\Http\Controllers\ChatController@home_screen')->name('home_screen');
 
 //チャット登録
-Route::post('/chat', 'ChatController@chat')->name('chat');
+Route::post('/chat', 'app\Http\Controllers\ChatController@chat')->name('chat');
 
 //マイページへ遷移
-Route::get('/mypage', 'UsersController@mypage')->name('mypage');
+Route::get('/mypage', 'app\Http\Controllers\UsersController@mypage')->name('mypage');
 
 //ユーザー情報の更新
-Route::post('/update', 'UsersController@update')->name('users.update');
+Route::post('/update', 'app\Http\Controllers\UsersController@update')->name('users.update');
 
 //ユーザーを削除
-Route::post('/destroy', 'UsersController@destroy')->name('users.destroy');
+Route::post('/destroy', 'app\Http\Controllers\UsersController@destroy')->name('users.destroy');
