@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User; // User.phpを使用
+use App\Models\User; // User.phpを使用
 use Illuminate\Support\Facades\Hash; // パスワードを乱数にする設定
 use Illuminate\Support\Facades\DB; // DBクラスを使用
-use App\Chat; // chat.phpを使用
+use App\Models\Chat; // chat.phpを使用
 use Illuminate\Support\Facades\Auth; // Authクラスを使用
 
 class UsersController extends Controller
