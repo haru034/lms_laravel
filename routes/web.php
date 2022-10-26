@@ -17,7 +17,7 @@ Route::get('/', 'app\Http\Controllers\UsersController@login_form'); // php artis
 
 //新規登録画面の表示
 Route::get('/signup_form', 'app\Http\Controllers\UsersController@signup_form')->name('signup_form');
-Route::post('/signup', 'app\Http\Controllers\UsersControllerr@signup')->name('signup'); // 新規登録の処理
+Route::post('/signup', 'app\Http\Controllers\UsersController@signup')->name('signup'); // 新規登録の処理
 
 //ログイン画面へ遷移
 Route::get('/login_form', 'app\Http\Controllers\UsersController@login_form')->name('login_form');
