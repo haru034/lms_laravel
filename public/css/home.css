@@ -1,0 +1,60 @@
+/* ホーム画面のCSS */
+body {
+    padding: 5%;
+    font-size: 100%;
+    background-color: white;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) { /* スマホ */
+    h1 {
+    font-size: 4vw;
+    }
+}
+
+@media screen and (min-width: 768px) { /* タブレット */
+    h1 {
+    font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1024px) { /* PC */
+    h1 {
+    font-size: 26px;
+    }
+}
+
+.outer-message-form {
+    width:100%;
+    height: auto;
+    margin-top:40px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+}
+
+.chat_table { /* チャット画面のCSS */
+    border-style: solid;
+    text-align: center;
+    height: 500px; /* table(親要素)の高さを指定 */
+    margin: auto;
+    overflow-y: scroll; /* チャットの投稿数が親要素の境界からあふれた場合、画面をスクロールすることで表示できる */
+}
+
+table {
+    margin-bottom: 50px;
+}
+
+th { /* thを固定 */
+    position: sticky;
+	top: 0;
+}
