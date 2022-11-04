@@ -2,6 +2,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,27 +14,30 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'app\Http\Controllers\UsersController@login_form'); // php artisan serve起動時に表示
+Route::get('/', [UsersController::class, 'login_form']); // php artisan serve起動時に表示
 
 //新規登録画面の表示
-Route::get('/signup_form', 'app\Http\Controllers\UsersController@signup_form')->name('signup_form');
-Route::post('/signup', 'app\Http\Controllers\UsersController@signup')->name('signup'); // 新規登録の処理
+Route::get('/signup_form', [UsersController::class, 'signup_form'])->name('signup_form');
+
+Route::post('/signup', [UsersController::class, 'signup'])->name('signup'); // 新規登録の処理
 
 //ログイン画面へ遷移
-Route::get('/login_form', 'app\Http\Controllers\UsersController@login_form')->name('login_form');
-Route::post('/login', 'app\Http\Controllers\UsersController@login')->name('login'); // ログイン認証
+Route::get('/login_form', [UsersController::class, 'login_form'])->name('login_form');
+
+Route::post('/login', [UsersController::class, 'login'])->name('login'); // ログイン認証
+
 
 //ホーム画面へ遷移
-Route::get('/home_screen', 'app\Http\Controllers\ChatController@home_screen')->name('home_screen');
+Route::get('/home_screen', [ChatController::class, 'home_screen'])->name('home_screen');
 
 //チャット登録
-Route::post('/chat', 'app\Http\Controllers\ChatController@chat')->name('chat');
+Route::post('/chat', [ChatController::class, 'chat'])->name('chat');
 
 //マイページへ遷移
-Route::get('/mypage', 'app\Http\Controllers\UsersController@mypage')->name('mypage');
+Route::get('/mypage', [UsersController::class, 'mypage'])->name('mypage');
 
 //ユーザー情報の更新
-Route::post('/update', 'app\Http\Controllers\UsersController@update')->name('users.update');
+Route::post('/update', [UsersController::class, 'update'])->name('update');
 
 //ユーザーを削除
-Route::post('/destroy', 'app\Http\Controllers\UsersController@destroy')->name('users.destroy');
+Route::post('/destroy', [UsersController::class, 'destroy'])->name('destroy');
