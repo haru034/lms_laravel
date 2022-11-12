@@ -38,7 +38,7 @@ Route::post('/chat', [ChatController::class, 'chat'])->name('chat');
 Route::get('/mypage', [UsersController::class, 'mypage'])->name('mypage');
 
 //ユーザー情報の更新
-Route::post('/update', [UsersController::class, 'update'])->name('update');
+Route::post('/update', [UsersController::class, 'update'])->name('users.update');
 
 //ユーザーを削除
-Route::post('/destroy', [UsersController::class, 'destroy'])->name('destroy');
+Route::post('/destroy', [UsersController::class, 'destroy'])->name('users.destroy');
