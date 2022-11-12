@@ -13,7 +13,7 @@ class Chat extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User'); // usersテーブルと紐づけ
+        return $this->belongsTo('App\Models\User'); // usersテーブルと紐づけ
     }
 }
 
