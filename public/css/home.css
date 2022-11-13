@@ -11,6 +11,10 @@ h1 {
     text-align: center;
 }
 
+.btn-3 .btn-warning {
+    border-color: #212529;
+}
+
 .btn-4 .btn-primary { 
     background-color: purple;
     border-color: purple;
