@@ -11,6 +11,11 @@ h1 {
     text-align: center;
 }
 
+.btn-4 .btn-primary { 
+    background-color: purple;
+    border-color: purple;
+}
+
 @media screen and (max-width: 767px) { /* スマホ */
     h1 {
     font-size: 2rem;
