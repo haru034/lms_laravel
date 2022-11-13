@@ -16,6 +16,15 @@ h1 {
     border-color: purple;
 }
 
+.homearea-btn {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 5vw;
+}
+
 @media screen and (max-width: 767px) { /* スマホ */
     h1 {
     font-size: 2rem;
