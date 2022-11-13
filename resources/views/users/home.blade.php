@@ -10,7 +10,7 @@
     <title>ホーム画面</title>
 </head>
 <body>
-    <h1>全国のプログラミング初学者が集う掲示板(β)</h1>
+    <h1>LMS_Laravel</h1>
     <section>
         <div>
             <div>
