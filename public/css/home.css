@@ -13,19 +13,19 @@ h1 {
 
 @media screen and (max-width: 767px) { /* スマホ */
     h1 {
-    font-size: 4vw;
+    font-size: 2rem;
     }
 }
 
 @media screen and (min-width: 768px) { /* タブレット */
     h1 {
-    font-size: 24px;
+    font-size: 2rem;
     }
 }
 
 @media screen and (min-width: 1024px) { /* PC */
     h1 {
-    font-size: 26px;
+    font-size: 3rem;
     }
 }
 
