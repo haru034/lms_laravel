@@ -15,7 +15,7 @@
         <div class="homearea-btn">
             <p class="btn-1"><a class="btn btn-primary" href="{{ url('mypage') }}">マイページ</a></p>
             <p class="btn-2"><a class="btn btn-secondary" href="{{ url('login_form') }}">ログアウト</a></p>
-            <p class="btn-3"><a class="btn btn-warning" href="{{ url('') }}">学習管理画面</a></p>
+            <p class="btn-3"><a class="btn btn-warning" href="{{ url('') }}">学習記録画面</a></p>
             <p class="btn-4"><a class="btn btn-primary" href="{{ url('') }}">過去ログ一覧</a></p>
         </div>
         <div> <!-- チャット一覧画面 -->
