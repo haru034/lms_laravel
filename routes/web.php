@@ -42,3 +42,6 @@ Route::post('/update', [UsersController::class, 'update'])->name('users.update')
 
 //ユーザーを削除
 Route::post('/destroy', [UsersController::class, 'destroy'])->name('users.destroy');
+
+//学習記録画面へ遷移
+Route::get('/record_screen', [RecordController::class, 'record_screen'])->name('record_screen');
