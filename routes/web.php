@@ -46,3 +46,6 @@ Route::post('/destroy', [UsersController::class, 'destroy'])->name('users.destro
 
 //学習記録画面へ遷移
 Route::get('/record_screen', [RecordController::class, 'record_screen'])->name('record_screen');
+
+//学習記録を登録
+Route::post('/record', [RecordController::class, 'record'])->name('record');
