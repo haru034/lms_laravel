@@ -26,25 +26,25 @@
                             <th><label for="health">生活リズム</label></th>
                             <td>
                                 <select name="health" class="form-control">
-                                <option value="">選択してください</option>
-                                <option value="良好">良好</option>
-                                <option value="まあまあ">まあまあ</option>
-                                <option value="最悪">最悪</option>
+                                    <option value="">選択してください</option>
+                                    <option value="良好">良好</option>
+                                    <option value="まあまあ">まあまあ</option>
+                                    <option value="最悪">最悪</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
                             <th><label for="kg">体重</label></th>
-                            <td><input type="number" class="form-control"></td><td>kg</td>
+                            <td><input type="number" name="kg" class="form-control"></td><td>kg</td>
                         </tr>
                         <tr>
-                            <th><label for="study">学習時間</label></th>
-                            <td><input type="number" class="form-control"></td><td>時間</td>
-                            <td><input type="number" class="form-control"></td><td>分</td>
+                            <th><label for="hours">学習時間</label></th>
+                            <td><input type="number" name="hours" class="form-control"></td><td>時間</td>
+                            <!-- <td><input type="number" name="hours" class="form-control"></td><td>分</td> -->
                         </tr>
                         <tr>
                             <th><label for="thought">感想</label></th>
-                            <td><textarea class="form-control" rows="5"></textarea></td>
+                            <td><textarea class="form-control" name="thought" rows="5"></textarea></td>
                         </tr>
                     </table>
                     <div class="recordarea-btn">
