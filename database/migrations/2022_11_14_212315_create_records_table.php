@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');  // usersテーブルのidが削除された場合、同じuser_idをrecordsテーブルから削除
             $table->char('health'); // 生活リズム
             $table->smallInteger('kg'); // 体重
-            $table->integer('study'); // 学習時間
+            $table->integer('hours'); // 学習時間
             $table->text('thought'); // 感想
             $table->timestamps(); // 登録・更新日時
         });
