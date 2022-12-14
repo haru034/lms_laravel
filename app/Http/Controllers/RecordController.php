@@ -46,8 +46,8 @@ class RecordController extends Controller
         return redirect('home_screen'); // 入力内容が保存されたら、学習記録画面にリダイレクト
     }
 
-    // データを更新
-    public function update(Request $request) // 学習記録を更新する処理
+    // データを保存
+    public function update(Request $request) // 学習記録を保存する処理
     {
         // バリデーション = 「入力チェック」
         $request->validate([
