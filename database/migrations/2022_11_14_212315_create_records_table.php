@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('hours'); // 学習時間
             $table->text('thought'); // 感想
             $table->timestamps(); // 登録・更新日時
+            $table->dropColumn('updated_at'); // 更新日時を無効化
         });
     }
 
