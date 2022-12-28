@@ -35,14 +35,16 @@
                         <th>表示名</th>
                         <th>投稿内容</th>
                         <th>投稿日時</th>
+                        <th>★</th>
                     </tr>
                 </thead>
                 @foreach ($chats as $chat) <!-- chatテーブルのデータを全て表示させる処理 -->
                 <tbody>
                     <tr>
-                        <td style="width:10%">{{ $chat->user->nickname }}</td> <!-- $chatに、user関数を使い、その中のnicknameを参照 -->
-                        <td style="width:40%">{{ $chat->message }}</td>
-                        <td style="width:20%">{{ $chat->created_at }}</td>
+                        <td class="nickname_box">{{ $chat->user->nickname }}</td> <!-- $chatに、user関数を使い、その中のnicknameを参照 -->
+                        <td class="message_box">{{ $chat->message }}</td>
+                        <td class="created_at_box">{{ $chat->created_at }}</td>
+                        <td class="delete_box"><a href="chat_delete/{{ $chat->id }}" class="chat_delete_button">削除</a></td>
                     </tr>
                 </tbody>
                 @endforeach

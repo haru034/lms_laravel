@@ -29,19 +29,95 @@ h1 {
     gap: 5vw;
 }
 
+.chat_delete_button {
+    color: white;
+    background: #ff0000;
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 1vw;
+}
+
 @media screen and (max-width: 767px) { /* スマホ */
+    th, td {
+        font-size: 2.5vw;
+    }
+
+    .chat_delete_button {
+        padding: 0;
+    }
+
+    td.nickname_box {
+        width: 5%;
+    }
+
+    td.message_box {
+        width: 20%;
+    }
+
+    td.created_at_box {
+        width: 10%;
+    }
+
+    td.delete_box {
+        width: 5%;
+    }
+
     h1 {
     font-size: 2rem;
     }
 }
 
 @media screen and (min-width: 768px) { /* タブレット */
+    th, td {
+        font-size: 2.5vw;
+    }
+
+    .chat_delete_button {
+        padding: 0;
+    }
+
+    td.nickname_box {
+        width: 5%;
+    }
+
+    td.message_box {
+        width: 40%;
+    }
+
+    td.created_at_box {
+        width: 20%;
+    }
+
+    td.delete_box {
+        width: 5%;
+    }
+
     h1 {
     font-size: 2rem;
     }
 }
 
 @media screen and (min-width: 1024px) { /* PC */
+    th, td {
+        font-size: 1vw;
+    }
+
+    td.nickname_box {
+        width: 5%;
+    }
+
+    td.message_box {
+        width: 40%;
+    }
+
+    td.created_at_box {
+        width: 20%;
+    }
+
+    td.delete_box {
+        width: 5%;
+    }
+
     h1 {
     font-size: 3rem;
     }
