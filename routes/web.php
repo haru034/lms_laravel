@@ -35,6 +35,9 @@ Route::get('/home_screen', [ChatController::class, 'home_screen'])->name('home_s
 //チャット登録
 Route::post('/chat', [ChatController::class, 'chat'])->name('chat');
 
+//チャット削除
+Route::get('/chat_delete/{id}', [ChatController::class, 'chat_delete'])->name('chat_delete');
+
 //マイページへ遷移
 Route::get('/mypage', [UsersController::class, 'mypage'])->name('mypage');
 
