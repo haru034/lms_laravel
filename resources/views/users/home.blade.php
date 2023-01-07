@@ -43,7 +43,7 @@
                     <tr>
                         <td class="nickname_box">{{ $chat->user->nickname }}</td> <!-- $chatに、user関数を使い、その中のnicknameを参照 -->
                         <td class="message_box">{{ $chat->message }}</td>
-                        <td class="created_at_box">{{ $chat->created_at }}</td>
+                        <td class="created_at_box">{{ $chat->created_at->format('Y年m月d日G時i分') }}</td>
                         <td class="delete_box"><a href="chat_delete/{{ $chat->id }}" class="chat_delete_button">削除</a></td>
                     </tr>
                 </tbody>
