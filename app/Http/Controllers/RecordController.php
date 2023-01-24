@@ -31,7 +31,7 @@ class RecordController extends Controller
     // データを登録
     public function record(Request $request)
     {
-        \Log::debug('登録処理');
+        // \Log::debug('登録処理');
         $record = new Record; // $recordの変数に、Recordモデルを定義
         $user = Auth::user(); // 認証しているユーザーを取得
         $id = Auth::id(); // 認証しているユーザーのIDを取得
@@ -66,7 +66,7 @@ class RecordController extends Controller
     // データを更新(上書き保存)
     public function update(Request $request)
     {
-        \Log::debug('更新処理');
+        // \Log::debug('更新処理');
         $record = Record::find(1);// user_idの取得
         Record::where('user_id', Auth::id())
         ->update([
