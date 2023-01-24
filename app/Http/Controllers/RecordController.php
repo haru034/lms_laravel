@@ -28,36 +28,53 @@ class RecordController extends Controller
         return view('users.record', compact('week', 'date'));
     }
 
-    /**
-     * 「記録」ボタンを押した時の処理(post)
-     * 
-     */
+    // データを登録
     public function record(Request $request)
     {
+        \Log::debug('登録処理');
         $record = new Record; // $recordの変数に、Recordモデルを定義
         $user = Auth::user(); // 認証しているユーザーを取得
         $id = Auth::id(); // 認証しているユーザーのIDを取得
         $record->user_id = $id; // user_idをセット
-        $record->health = $request->health; // healthをセット
-        $record->kg = $request->kg; // kgをセット
-        $record->hours = $request->hours; // hoursをセット
-        $record->thought = $request->thought; // thoughtをセット
+        $record->health = $request->input('health'); // healthをセット
+        $record->kg = $request->input('kg'); // kgをセット
+        $record->hours = $request->input('hours'); // hoursをセット
+        $record->thought = $request->input('thought'); // thoughtをセット
         $record->save(); // $recordに格納されている情報を保存。
-        return redirect('home_screen'); // 入力内容が保存されたら、学習記録画面にリダイレクト
+        return redirect()->route('home_screen')->with('flash_message', '学習記録を登録しました。');
     }
 
-    // データを保存
-    public function update(Request $request) // 学習記録を保存する処理
+    /**
+     * 学習記録編集画面の表示
+     * 
+     */
+    public function edit_screen(Record $record)
     {
-        // バリデーション = 「入力チェック」
-        $request->validate([
-            'required' => ['health', 'kg', 'hours', 'thought'] // 入力必須
-        ]);
-        // 各ユーザーの情報を取得
-        $user = User::find(Auth::user()->id);
-        $user->nickname = $request->nickname;
+        $week = [
+            '日', // 0
+            '月', // 1
+            '火', // 2
+            '水', // 3
+            '木', // 4
+            '金', // 5
+            '土', // 6
+        ];
+        $date = date('w');
+        return view('users.edit', compact('week', 'date', 'record'));
+    }
 
-        $user->save(); // 情報を更新すると
-        return redirect('home_screen'); // ホーム画面にリダイレクト
+    // データを更新(上書き保存)
+    public function update(Request $request)
+    {
+        \Log::debug('更新処理');
+        $record = Record::find(1);// user_idの取得
+        Record::where('user_id', Auth::id())
+        ->update([
+        'health' => $request->input('health'),
+        'kg' => $request->input('kg'),
+        'hours' => $request->input('hours'),
+        'thought' => $request->input('thought')
+        ]);
+        return redirect()->route('home_screen', $record)->with('flash_message', '学習記録を更新しました。');
     }
 }

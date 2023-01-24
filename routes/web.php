@@ -52,3 +52,9 @@ Route::get('/record_screen', [RecordController::class, 'record_screen'])->name('
 
 //学習記録を登録
 Route::post('/record', [RecordController::class, 'record'])->name('record');
+
+//学習記録編集画面へ遷移
+Route::get('/edit_screen', [RecordController::class, 'edit_screen'])->name('edit_screen');
+
+//学習記録を更新
+Route::put('/update', [RecordController::class, 'update'])->name('update');

@@ -1,4 +1,4 @@
-<!-- 学習記録画面のView -->
+<!-- 学習記録編集画面のView -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="{{ asset('css/record.css') }}"> <!-- record.cssと連携 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学習記録画面</title>
+    <title>学習記録編集画面</title>
 </head>
 <body>
-    <h1>学習記録画面</h1>
+    <h1>学習記録編集画面</h1>
     <section>
         <div class="recordarea-btn">
             <p class="btn-5"><a class="btn btn-primary" href="{{ url('home_screen') }}">ホーム画面に戻る</a></p>
@@ -20,15 +20,16 @@
             <p>{{ session('flash_message') }}</p>
         @endif
         <div>
-            <form action="{{ route('record') }}" method="post" autocomplete="off">
+            <form action="{{ route('update', $record) }}" method="post" autocomplete="off">
                 @csrf <!-- CSRF保護 -->
+                @method('put')
                 <p class="record_date_title">本日・{{ \Carbon\Carbon::now()->format("Y年m月d日($week[$date])") }}の記録</p>
                 <div class="record_form">
                     <table>
                         <tr>
                             <th><label for="health">生活リズム</label></th>
                             <td>
-                                <select name="health" class="form-control">
+                                <select name="health" class="form-control" value="">
                                     <option value="">選択してください</option>
                                     <option value="良好">良好</option>
                                     <option value="まあまあ">まあまあ</option>
@@ -50,8 +51,8 @@
                         </tr>
                     </table>
                     <div class="recordarea-btn">
-                        <!-- <input type="hidden" name="_method" value="put"> -->
-                        <button type="submit" class="btn btn-success" value="$record">記録する</button>
+                        <input type="hidden" name="_method" value="put">
+                        <button type="submit" class="btn btn-success">更新する</button>
                     </div>
                 </div>
             </form>
