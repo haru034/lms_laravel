@@ -1,4 +1,4 @@
-<!-- 学習記録編集画面のView -->
+<!-- 編集画面のView -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
