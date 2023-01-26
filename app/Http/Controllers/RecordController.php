@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth; // Authクラスを使用
 use App\Models\User;
 use App\Models\Chat;
 use App\Models\Record;
+use Carbon\Carbon;
 class RecordController extends Controller
 {
     /**
@@ -68,7 +69,9 @@ class RecordController extends Controller
     {
         // \Log::debug('更新処理');
         $record = Record::find(1); // user_idの取得
+        $today = Carbon::today(); // 当日にデータを記録した日付の取得
         Record::where('user_id', Auth::id())
+        ->whereDate('created_at', $today)
         ->update([
         'health' => $request->input('health'),
         'kg' => $request->input('kg'),
