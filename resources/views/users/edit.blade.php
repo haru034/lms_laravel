@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}"> <!-- bootstrap読み込み -->
     <link rel="stylesheet" href="{{ asset('css/record.css') }}"> <!-- record.cssと連携 -->
+    <link rel="stylesheet" href="{{ asset('css/edit.css') }}"> <!-- edit.cssと連携 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学習記録編集画面</title>
@@ -12,7 +13,7 @@
 <body>
     <h1>学習記録編集画面</h1>
     <section>
-        <div class="recordarea-btn">
+        <div class="editarea-btn">
             <p class="btn-5"><a class="btn btn-primary" href="{{ url('home_screen') }}">ホーム画面に戻る</a></p>
             <p class="btn-6"><a class="btn btn-primary" href="{{ url('') }}">過去ログ一覧</a></p>
         </div>
@@ -23,8 +24,8 @@
             <form action="{{ route('update', $record) }}" method="post" autocomplete="off">
                 @csrf <!-- CSRF保護 -->
                 @method('put')
-                <p class="record_date_title">本日・{{ \Carbon\Carbon::now()->format("Y年m月d日($week[$date])") }}の記録</p>
-                <div class="record_form">
+                <p class="edit_date_title">本日・{{ \Carbon\Carbon::now()->format("Y年m月d日($week[$date])") }}の記録</p>
+                <div class="edit_form">
                     <table>
                         <tr>
                             <th><label for="health">生活リズム</label></th>
@@ -50,7 +51,7 @@
                             <td><textarea class="form-control" name="thought" rows="5"></textarea></td>
                         </tr>
                     </table>
-                    <div class="recordarea-btn">
+                    <div class="editarea-btn">
                         <input type="hidden" name="_method" value="put">
                         <button type="submit" class="btn btn-success">更新する</button>
                     </div>
