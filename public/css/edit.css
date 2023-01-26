@@ -1,0 +1,123 @@
+/* 学習記録編集画面のCSS */
+
+body {
+    padding: 5%;
+    font-size: 100%;
+    background-color: white;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.editarea-btn {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    justify-items: center;
+    align-items: center;
+    width: 50%;
+    gap: 5vw;
+    align-items: stretch;
+}
+
+.edit_date_title {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 3vh;
+}
+
+.edit_form {
+    padding: 0% 25%;
+    margin: 0 auto;
+}
+
+table {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.edit_form th, td {
+    padding-top: 2.8vh;
+}
+
+td {
+    white-space: nowrap;
+}
+
+.form-control {
+    border-color: black;
+}
+
+.btn-success {
+    margin-top: 5vh;
+    display: inline-block;
+    width: 20vw;
+}
+
+@media screen and (min-width: 768px) { /* タブレット */
+    h1 {
+    font-size: 2.5rem;
+    }
+
+    .edit_date_title {
+        font-size: 1.5rem;
+    }
+
+    .edit_form {
+        margin: 0;
+        align-items: center;
+        width: 100%;
+        /* transform: scale(1.5); */
+    }
+
+}
+
+@media screen and (max-width: 767px) { /* スマホ */
+    h1 {
+    font-size: 2rem;
+    }
+
+    .edit_date_title {
+        font-size: 1rem;
+    }
+
+    .editarea-btn {
+        width: 100%;
+    }
+
+    .edit_form table {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .edit_form tr {
+        margin: 0;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        width: 50%;
+        align-items:stretch;
+    }
+
+    .form-control {
+        width: 50vw;
+    }
+
+    .edit_form textarea {
+        margin-bottom: 25%;
+    }
+
+    .btn-success {
+        margin-top: 5vh;
+        display: inline-block;
+        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        width: 25vw;
+    }
+}
