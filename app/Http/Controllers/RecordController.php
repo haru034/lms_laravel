@@ -67,7 +67,7 @@ class RecordController extends Controller
     public function update(Request $request)
     {
         // \Log::debug('更新処理');
-        $record = Record::find(1);// user_idの取得
+        $record = Record::find(1); // user_idの取得
         Record::where('user_id', Auth::id())
         ->update([
         'health' => $request->input('health'),
