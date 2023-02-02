@@ -16,7 +16,7 @@
             <p class="btn-1"><a class="btn btn-primary" href="{{ url('mypage') }}">マイページ</a></p>
             <p class="btn-2"><a class="btn btn-secondary" href="{{ url('login_form') }}">ログアウト</a></p>
             <p class="btn-3"><a class="btn btn-warning" href="{{ url('record_screen') }}">学習記録画面</a></p>
-            <p class="btn-4"><a class="btn btn-primary" href="{{ url('') }}">過去ログ一覧</a></p>
+            <p class="btn-4"><a class="btn btn-primary" href="{{ url('list_screen') }}">過去ログ一覧</a></p>
         </div>
         <div> <!-- チャット一覧画面 -->
             <form action="{{ route('chat') }}" method="post" autocomplete="off" style="height: auto; margin-bottom: 10px">
