@@ -80,4 +80,22 @@ class RecordController extends Controller
         ]);
         return redirect()->route('home_screen', $record)->with('flash_message', '学習記録を更新しました。');
     }
+
+    // 過去ログを一覧表示
+    public function list_screen() {
+        $week = [
+            '日', // 0
+            '月', // 1
+            '火', // 2
+            '水', // 3
+            '木', // 4
+            '金', // 5
+            '土', // 6
+        ];
+        $date = date('w');
+        $posts = Record::latest()->get(); // recordsテーブルの全データを新しい順で取得する
+        $record = Record::find(1); // user_idの取得
+        $record = Record::where('id');
+        return view('users.list', compact('week', 'date', 'record'), ['posts' => $posts]);
+    }
 }
