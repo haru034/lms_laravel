@@ -21,10 +21,10 @@
                 <thead class="thead-dark">
                     <tr>
                         <p>{{$record->updated_at->format("Y/m/d($week[$date])")}}</p>
-                        <td class="table-danger">生活リズム：<span>{{$record->health}}</span></td>
-                        <td class="table-primary">体重：<span>{{$record->kg}}kg</span></td>
-                        <td class="table-success">学習時間：<span>{{$record->hours}}時間</span></td>
-                        <td class="table-warning">感想：<span>{{$record->thought}}</span></td>
+                        <td class="table-danger rounded">生活リズム：<span>{{$record->health}}</span></td>
+                        <td class="table-primary rounded">体重：<span>{{$record->kg}}kg</span></td>
+                        <td class="table-success rounded">学習時間：<span>{{$record->hours}}時間</span></td>
+                        <td class="table-warning rounded">感想：<span>{{$record->thought}}</span></td>
                     </tr>
                 </thead>
             </table>
