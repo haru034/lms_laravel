@@ -1,0 +1,57 @@
+/* 過去ログ一覧画面のCSS */
+body {
+    padding: 5%;
+    font-size: 100%;
+    background-color: white;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.list_table p {
+    font-size: 1.5rem;
+}
+
+.list_table tr {
+    display: flex;
+}
+
+.list_table tr span {
+    border-bottom: 0.2vw solid black;
+}
+
+.list_table td {
+    flex-wrap: wrap;
+    display: flex;
+    width: 50%;
+}
+
+@media screen and (min-width: 768px) { /* タブレット */
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) { /* スマホ */
+    h1 {
+        font-size: 2rem;
+    }
+
+    .list_table td {
+        font-size: 1rem;
+    }
+
+    .listarea-btn {
+        display: flex;
+        align-items: center;
+        margin: 1rem 25vw;
+    }
+
+    .listarea-btn p {
+        margin: 0 auto;
+    }
+}
