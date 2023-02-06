@@ -13,16 +13,22 @@
     <h1>過去ログ一覧画面</h1>
     <section>
         <div class="listarea-btn">
-            <p class="btn-1"><a class="btn btn-primary" href="{{ url('home_screen') }}">ホーム画面に戻る</a></p>
+            <p><a class="btn btn-primary" href="{{ url('home_screen') }}">ホーム画面に戻る</a></p>
         </div>
         @foreach ($posts as $record)
-        <tr>
-            <p class="list_date_title">{{$record->updated_at->format("Y/m/d($week[$date])")}}の記録</p>
-            <td>{{$record->health}}</td><br>
-            <td>{{$record->kg}}</td><br>
-            <td>{{$record->hours}}</td><br>
-            <td>{{$record->thought}}</td><br>
-        </tr>
+        <div class="list_table table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <p>{{$record->updated_at->format("Y/m/d($week[$date])")}}</p>
+                        <td class="table-danger">生活リズム：<span>{{$record->health}}</span></td>
+                        <td class="table-primary">体重：<span>{{$record->kg}}kg</span></td>
+                        <td class="table-success">学習時間：<span>{{$record->hours}}時間</span></td>
+                        <td class="table-warning">感想：<span>{{$record->thought}}</span></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
         @endforeach
     </section>
 </body>
