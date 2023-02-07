@@ -41,8 +41,16 @@ h1 {
         font-size: 2rem;
     }
 
+    .list_table tr {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .list_table td {
         font-size: 1rem;
+        width: 100%;
     }
 
     .listarea-btn {
