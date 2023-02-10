@@ -20,9 +20,9 @@ h1 {
     display: flex;
 }
 
-.list_table tr span {
+/* .list_table tr span {
     border-bottom: 0.2vw solid black;
-}
+} */
 
 .list_table td {
     flex-wrap: wrap;
