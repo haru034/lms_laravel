@@ -12,7 +12,7 @@
 <body class="bg-dark text-white">
     <div class="signup">
         <div>
-            <h1>LMS_Laravel</h1>
+            <h1>LMS_Laravel</h1><br>
             <h2>＜新規登録画面＞</h2>
         </div>
             <div class="outer-signup-form">

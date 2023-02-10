@@ -12,7 +12,7 @@
 <body class="bg-dark text-white">
     <div class="login">
         <div>
-        <h1>LMS_Laravel</h1>
+        <h1>LMS_Laravel</h1><br>
         <h2>＜ログイン画面＞</h2>
         </div>
             <div class="outer-login-form">
