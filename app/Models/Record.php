@@ -10,7 +10,7 @@ class Record extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'health', 'kg', 'study', 'thounght'
+        'user_id', 'goal', 'health', 'kg', 'study', 'thounght'
     ];
 
     public function user()
