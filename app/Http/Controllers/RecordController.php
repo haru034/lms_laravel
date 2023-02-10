@@ -37,6 +37,7 @@ class RecordController extends Controller
         $user = Auth::user(); // 認証しているユーザーを取得
         $id = Auth::id(); // 認証しているユーザーのIDを取得
         $record->user_id = $id; // user_idをセット
+        $record->goal = $request->input('goal'); // goalをセット
         $record->health = $request->input('health'); // healthをセット
         $record->kg = $request->input('kg'); // kgをセット
         $record->hours = $request->input('hours'); // hoursをセット
