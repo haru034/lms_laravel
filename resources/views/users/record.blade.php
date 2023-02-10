@@ -14,7 +14,7 @@
     <section>
         <div class="recordarea-btn">
             <p class="btn-5"><a class="btn btn-primary" href="{{ url('home_screen') }}">ホーム画面に戻る</a></p>
-            <p class="btn-5-5"><a class="btn btn-warning" href="{{ url('edit_screen') }}">編集画面へ</a></p>
+            <p class="btn-5-5"><a class="btn btn-warning" href="{{ url('edit_screen') }}">編集する</a></p>
             <p class="btn-6"><a class="btn btn-primary" href="{{ url('list_screen') }}">過去ログ一覧</a></p>
         </div>
         @if (session('flash_message'))
