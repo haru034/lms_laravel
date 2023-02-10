@@ -3,4 +3,9 @@
 .signup {
     text-align: center; /* 全体を画面中央に配置 */
     padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.signup h2 {
+    margin-bottom: 5vh;
 }
