@@ -67,6 +67,12 @@ td {
     width: 20vw;
 }
 
+#footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 1rem;
+}
+
 @media screen and (min-width: 768px) { /* タブレット */
     h1 {
     font-size: 2.5rem;

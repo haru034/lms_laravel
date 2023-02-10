@@ -20,3 +20,9 @@ h1 {
 .btn-movement {
     position: relative; bottom: 60px;
 }
+
+#footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 1rem;
+}

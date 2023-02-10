@@ -51,5 +51,6 @@
             </table>
         </div>
     </section>
+    <div id="footer">Copyright© 2023 Harutaka Imai</div>
 </body>
 </html>

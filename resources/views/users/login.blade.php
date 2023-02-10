@@ -34,6 +34,7 @@
                 <li>{{$error}}</li>
             @endforeach
         </div>
+        <div id="footer">Copyright© 2023 Harutaka Imai</div>
     </div>
 </body>
 </html>

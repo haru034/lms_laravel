@@ -15,7 +15,8 @@
     <section>
         <div class="mypage">
             <div>
-                <h1>マイページ</h1>
+                <h1>LMS_Laravel</h1>
+                <h2>＜マイページ＞</h2>
                 <h2>ユーザーID: {{ $user->id }}</h2>
             </div>
                 <div> <!-- ユーザー情報の更新 -->
@@ -41,5 +42,6 @@
             </div>
         </div>
     </section>
+    <div id="footer">Copyright© 2023 Harutaka Imai</div>
 </body>
 </html>
