@@ -40,11 +40,11 @@
                         </tr>
                         <tr>
                             <th><label for="kg">体重</label></th>
-                            <td><input type="number" name="kg" class="form-control"></td><td>kg</td>
+                            <td><input type="number" step="0.1" name="kg" class="form-control"></td><td>kg</td>
                         </tr>
                         <tr>
                             <th><label for="hours">学習時間</label></th>
-                            <td><input type="number" name="hours" class="form-control"></td><td>時間</td>
+                            <td><input type="number" step="0.1" name="hours" class="form-control"></td><td>時間</td>
                         </tr>
                         <tr>
                             <th><label for="thought">感想</label></th>
