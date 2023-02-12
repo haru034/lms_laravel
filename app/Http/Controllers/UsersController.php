@@ -73,7 +73,7 @@ class UsersController extends Controller
             {
             return redirect()->route('home_screen'); // ログインに成功するとホーム画面にリダイレクト
             }
-            return redirect()->back(); // ログインに失敗するとログイン画面に戻る
+            // return redirect()->back(); // ログインに失敗するとログイン画面に戻る
     }
 
     /**
