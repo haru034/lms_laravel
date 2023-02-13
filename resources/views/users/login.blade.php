@@ -20,9 +20,9 @@
                     <form action="{{ route('login') }}" method="post" enctype="multipart/form-data" autocomplete="off">
                         @csrf <!-- CSRF保護 -->
                         <p>ニックネーム</p>
-                        <p><input type="text" name="nickname" placeholder="ニックネームを入力してください" autocomplete="off" style="width:250px; height:30px;"></P>
+                        <p><input type="text" name="nickname" placeholder="ニックネームを入力" autocomplete="off" style="width:250px; height:30px;"></P>
                         <p>パスワード</P>
-                        <p><input type="password" name="password" placeholder="パスワードを入力してください" autocomplete="off" style="width:250px; height:30px; margin-top:10px;"></P>
+                        <p><input type="password" name="password" placeholder="パスワードを入力" autocomplete="off" style="width:250px; height:30px; margin-top:10px;"></P>
                         <p><input type="submit" value="ログイン" autocomplete="off" style="width:200px; height:30px; margin-top:20px; margin-bottom:20px;"></p>
                     </form>
                     <a class="btn btn-primary" href="{{ route('signup_form') }}">新規登録画面に戻る</a> <!-- リダイレクト -->
