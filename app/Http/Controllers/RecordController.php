@@ -83,7 +83,7 @@ class RecordController extends Controller
     }
 
     // 過去ログを一覧表示
-    public function list_screen() {
+    public function list_screen(Request $request) {
         $week = [
             '日', // 0
             '月', // 1
@@ -94,9 +94,9 @@ class RecordController extends Controller
             '土', // 6
         ];
         $date = date('w');
-        $posts = Record::latest()->get(); // recordsテーブルの全データを新しい順で取得する
         $record = Record::find(1); // user_idの取得
         $record = Record::where('id');
+        $posts = Record::where('user_id', Auth::id())->latest()->get(); // ユーザーIDを取得し、recordsテーブルの全データを新しい順で取得する
         return view('users.list', compact('week', 'date', 'record'), ['posts' => $posts]);
     }
 }
