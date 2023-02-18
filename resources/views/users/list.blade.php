@@ -20,7 +20,8 @@
             <table class="table table-bordered">
                 <thead class="thead-dark">
                     <tr>
-                        <p>{{$record->updated_at->format("Y/m/d($week[$date])")}}</p>
+                        <!-- <p>{{$record->updated_at->format("Y/m/d($week[$date])")}}</p> -->
+                        <p>{{$record->updated_at->format("Y/m/d")}}</p>
                         <td class="table-dark rounded">【本日の目標】<span>{{$record->goal}}</span></td>
                         <td class="table-danger rounded">【生活リズム】<span>{{$record->health}}</span></td>
                         <td class="table-primary rounded">【体重】<span>{{$record->kg}}kg</span></td>
