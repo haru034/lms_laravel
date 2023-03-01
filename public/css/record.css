@@ -12,10 +12,19 @@ h1 {
     font-size: 3rem;
 }
 
-.recordarea-btn {
+.recordarea-btn1 {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-columns: 0.5fr 0.5fr;
+    justify-items: center;
+    align-items: center;
+    width: 50%;
+    gap: 5vw;
+    align-items:stretch;
+}
+
+.recordarea-btn2 {
+    margin: 0 auto;
     justify-items: center;
     align-items: center;
     width: 50%;
@@ -40,6 +49,7 @@ h1 {
 }
 
 .record_form {
+    display: block;
     padding: 0% 25%;
     margin: 0 auto;
 }
@@ -62,6 +72,12 @@ td {
 }
 
 .btn-success {
+    margin-top: 5vh;
+    display: inline-block;
+    width: 20vw;
+}
+
+.btn-warning {
     margin-top: 5vh;
     display: inline-block;
     width: 20vw;
@@ -100,38 +116,50 @@ td {
         font-size: 1rem;
     }
 
-    .recordarea-btn {
+    .recordarea-btn1 {
+        width: 100%;
+    }
+
+    .recordarea-btn2 {
         width: 100%;
     }
 
     .record_form table {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .record_form tbody {
         width: 100%;
         margin: 0 auto;
     }
 
     .record_form tr {
-        margin: 0;
+        margin: 0 auto;
         display: grid;
         justify-items: center;
+        justify-content: center;
         align-items: center;
         width: 50%;
-        align-items:stretch;
+        align-items: stretch;
     }
 
     .form-control {
         width: 50vw;
     }
 
-    .record_form textarea {
-        margin-bottom: 25%;
-    }
 
     .btn-success {
         margin-top: 5vh;
         display: inline-block;
-        margin: 0 auto;
-        position: relative;
-        left: 50%;
-        width: 25vw;
+        width: 100%;
+    }
+
+    .btn-warning {
+        margin-top: 5vh;
+        display: inline-block;
+        width: 100%;
     }
 }

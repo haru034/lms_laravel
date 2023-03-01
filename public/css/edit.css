@@ -102,12 +102,13 @@ td {
     }
 
     .edit_form tr {
-        margin: 0;
+        margin: 0 auto;
         display: grid;
         justify-items: center;
         align-items: center;
+        justify-content: center;
         width: 50%;
-        align-items:stretch;
+        align-items: stretch;
     }
 
     .form-control {
