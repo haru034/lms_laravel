@@ -12,9 +12,9 @@
 <body>
     <h1>学習記録画面</h1>
     <section>
-        <div class="recordarea-btn">
+        <div class="recordarea-btn1">
             <p class="btn-5"><a class="btn btn-primary" href="{{ url('home_screen') }}">ホーム画面に戻る</a></p>
-            <p class="btn-5-5"><a class="btn btn-warning" href="{{ url('edit_screen') }}">編集する</a></p>
+            <!-- <p class="btn-5-5"><a class="btn btn-warning" href="{{ url('edit_screen') }}">編集する</a></p> -->
             <p class="btn-6"><a class="btn btn-primary" href="{{ url('list_screen') }}">過去ログ一覧</a></p>
         </div>
         @if (session('flash_message'))
@@ -54,8 +54,9 @@
                             <td><textarea class="form-control" name="thought" rows="5"></textarea></td>
                         </tr>
                     </table>
-                    <div class="recordarea-btn">
+                    <div class="recordarea-btn2">
                         <button type="submit" class="btn btn-success" value="$record">記録する</button>
+                        <p class="btn-5-5"><a class="btn btn-warning" href="{{ url('edit_screen') }}">編集する</a></p>
                     </div>
                 </div>
             </form>
