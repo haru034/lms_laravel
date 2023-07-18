@@ -1,0 +1,14 @@
+/* 週間グラフ画面のCSS */
+
+body {
+    padding: 5%;
+    font-size: 100%;
+    background-color: white;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+}
