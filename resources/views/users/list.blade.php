@@ -15,6 +15,9 @@
         <div class="listarea-btn">
             <p><a class="btn btn-primary" href="{{ url('home_screen') }}">ホーム画面に戻る</a></p>
         </div>
+        <div class="recordarea-btn1">
+            <p class="btn-7"><a class="btn btn-primary" href="{{ url('chart_screen') }}">週間グラフ画面</a></p>
+        </div>
         @foreach ($posts as $record)
         <div class="list_table table-responsive">
             <table class="table table-bordered">

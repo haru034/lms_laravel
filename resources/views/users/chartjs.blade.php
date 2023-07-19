@@ -12,9 +12,9 @@
 <body>
     <div>
         <canvas id="myChart"></canvas>
+        <h1>週間グラフ画面</h1>
     </div>
 
-    <h1>週間グラフ画面</h1>
 
     <!-- グラフを描画 -->
     <script>

@@ -61,3 +61,9 @@ Route::put('/update', [RecordController::class, 'update'])->name('update');
 
 // 過去ログ一覧画面の表示
 Route::get('/list_screen', [RecordController::class, 'list_screen'])->name('list_screen');
+
+// 週間グラフ画面の表示
+Route::view('/users/chartjs', 'users.chartjs');
+// Route::view('/users/chartjs', function () {
+//     return view('users.chartjs');
+// })->name('chart_screen');
