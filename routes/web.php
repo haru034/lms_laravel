@@ -35,6 +35,9 @@ Route::get('/home_screen', [ChatController::class, 'home_screen'])->name('home_s
 // チャット登録
 Route::post('/chat', [ChatController::class, 'chat'])->name('chat');
 
+// 非同期通信(ajax)
+Route::get('/result/ajax', [ChatController::class, 'getData']);
+
 // チャット削除
 Route::get('/chat_delete/{id}', [ChatController::class, 'chat_delete'])->name('chat_delete');
 
