@@ -42,6 +42,18 @@ class ChatController extends Controller
         return redirect('home_screen'); // 入力内容が保存されたら、ホーム画面にリダイレクト
     }
 
+    /**
+     * URLにアクセスしたらjsonを返す処理
+     * 
+     */
+    public function getData()
+    {
+        $comments = Comment::orderBy('created_at', 'desc')->get();
+        $json = ["chats" => $chats];
+        return response()->json($json);
+    }
+
+
     // /**
     //  * 「削除」ボタンを押した時の処理(チャット削除)
     //  * 
