@@ -43,24 +43,13 @@ class ChatController extends Controller
     }
 
     /**
-     * URLにアクセスしたらjsonを返す処理
+     * URL(/result/ajax)にアクセスしたらjsonを返すAPI
      * 
      */
     public function getData()
     {
-        $comments = Comment::orderBy('created_at', 'desc')->get();
+        $chats = Chat::orderBy('created_at', 'desc')->get();
         $json = ["chats" => $chats];
         return response()->json($json);
     }
-
-
-    // /**
-    //  * 「削除」ボタンを押した時の処理(チャット削除)
-    //  * 
-    //  */
-    // public function chat_delete($result)
-    // {
-    //     $result = Chat::where('id', $result)->delete();
-    //     return redirect('home_screen'); // 削除」ボタンを押すと、ホーム画面にリダイレクト
-    // }
 }
