@@ -24,33 +24,37 @@
                 <div class="outer-message-form">
                     <p>「今から学習を始めます」「終わります」など、学習に関する事なら何でもいいので投稿しましょう！</p>
                     <textarea name="message" placeholder="ここにメッセージを入力してください" autocomplete="off" rows="3" cols="200"></textarea><br> <!-- rows =「高さ」, cols =「幅」-->
-                    <button type="submit" class="btn btn-success">投稿</button>
+                    <button type="submit" name="chatpost" class="btn btn-success">投稿</button>
                 </div>
             </form>
         </div>
-        <div class="chat_table table-responsive">
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>表示名</th>
-                        <th>投稿内容</th>
-                        <th>投稿日時</th>
-                        <!-- <th>★</th> -->
-                    </tr>
-                </thead>
-                @foreach ($chats as $chat) <!-- chatテーブルのデータを全て表示させる処理 -->
-                <tbody>
-                    <tr>
-                        <td class="nickname_box">{{ $chat->user->nickname }}</td> <!-- $chatに、user関数を使い、その中のnicknameを参照 -->
-                        <td class="message_box">{{ $chat->message }}</td>
-                        <td class="created_at_box">{{ $chat->created_at->format('Y年m月d日G時i分') }}</td>
-                        <!-- <td class="delete_box"><a href="chat_delete/{{ $chat->id }}" class="chat_delete_button">削除</a></td> -->
-                    </tr>
-                </tbody>
-                @endforeach
-            </table>
+        <div id="chat-data"> <!-- chat.js10行目の処理 -->
+            <div class="chat_table table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>表示名</th>
+                            <th>投稿内容</th>
+                            <th>投稿日時</th>
+                            <!-- <th>★</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach ($chats as $chat) <!-- chatテーブルのデータを全て表示させる処理 -->
+                        <tr>
+                            <td class="nickname_box">{{ $chat->user->nickname }}</td> <!-- $chatに、user関数を使い、その中のnicknameを参照 -->
+                            <td class="message_box">{{ $chat->message }}</td>
+                            <td class="created_at_box">{{ $chat->created_at->format('Y年m月d日G時i分') }}</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
     <div id="footer">Copyright© 2023 Harutaka Imai</div>
+
+    <!-- chat.js読み込み -->
+    <script src="{{ asset('/chat.js') }}"></script>
 </body>
 </html>
