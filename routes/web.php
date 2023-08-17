@@ -1,4 +1,3 @@
-<!-- ルーティング -->
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -37,9 +36,6 @@ Route::post('/chat', [ChatController::class, 'chat'])->name('chat');
 
 // 非同期通信(ajax)
 Route::get('/result/ajax', [ChatController::class, 'getData']);
-
-// チャット削除
-Route::get('/chat_delete/{id}', [ChatController::class, 'chat_delete'])->name('chat_delete');
 
 // マイページへ遷移
 Route::get('/mypage', [UsersController::class, 'mypage'])->name('mypage');
