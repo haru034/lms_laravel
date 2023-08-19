@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}"> <!-- home.cssと連携 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> <!-- jQuery読み込み -->
     <title>ホーム画面</title>
 </head>
 <body>
@@ -36,7 +37,6 @@
                             <th>表示名</th>
                             <th>投稿内容</th>
                             <th>投稿日時</th>
-                            <!-- <th>★</th> -->
                         </tr>
                     </thead>
                     <tbody>
