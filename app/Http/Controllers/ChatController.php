@@ -43,13 +43,24 @@ class ChatController extends Controller
     }
 
     /**
-     * URL(/result/ajax)にアクセスしたらjsonを返すAPI
+     * URL(/result/ajax)にアクセスしたらJSONデータを返す処理
      * 
      */
     public function getData()
     {
         $chats = Chat::orderBy('created_at', 'desc')->get();
-        $json = ["chats" => $chats];
+        $jsonChats = [];
+        $user = Auth::user();
+
+        foreach ($chats as $chat) {
+            $jsonChats[] = [
+                'nickname' => $chat->user->nickname,
+                'message' => $chat->message,
+                'created_at' => $chat->created_at->format('Y年m月d日G時i分')
+            ];
+        }
+
+        $json = ["chats" => $jsonChats];
         return response()->json($json);
     }
 }
