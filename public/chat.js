@@ -8,29 +8,19 @@ window.onload = function(){
             dataType: "json", // 取得データをJSON形式に指定
         })
         .done(function(data) {
-            $("#chat-data") // home.blade.php31行目のidに対して下記HTMLが埋め込まれる処理
-                .find(".chat-visible").each(function(){
-                    $(this).attr({
-                        "nickname": $(this).find(".chat-visible"),
-                        "created_at": $(this).find(".chat-visible"),
-                        "message": $(this).find(".chat-visible")
-                    });
-                })
-                .remove();
-            console.log(data.chats);
+            var tableBody = $("#chat-data tbody"); // home.blade.php42行目のtbody要素を取得
+            tableBody.empty(); // chatテーブル内の既存のデータを一旦クリア
+
             for (var i = 0; i < data.chats.length; i++) {
+                var chat = data.chats[i];
                 var html = `
-                            <div class="media chat-visible">
-                                <div class="media-body chat-body">
-                                    <div class="row">
-                                        <span class="chat-body-user" id="nickname">${data.chats[i].nickname}</span>
-                                        <span class="chat-body-time" id="created_at">${data.chats[i].created_at}</span>
-                                    </div>
-                                    <span class="chat-body-content" id="message">${data.chats[i].message}</span>
-                                </div>
-                            </div>
-                        `;
-                $("#chat-data").append(html); // 生成したHTMLコードを表示領域に追加
+                            <tr>
+                                <td class="nickname_box">${ chat.nickname }</td>
+                                <td class="message_box">${ chat.message }</td>
+                                <td class="created_at_box">${ chat.created_at }</td>
+                            </tr>
+                            `;
+                tableBody.append(html); // JSON形式で取得したデータをchatテーブルに追加
             }
         })
         .fail(function(res) {
